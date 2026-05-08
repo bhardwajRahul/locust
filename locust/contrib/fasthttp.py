@@ -256,7 +256,7 @@ class FastHttpSession:
 
         if not allow_redirects:
             old_redirect_response_codes = self.client.redirect_resonse_codes
-            self.client.redirect_resonse_codes = []
+            self.client.redirect_resonse_codes = frozenset()
 
         start_perf_counter = time.perf_counter()
         # send request, and catch any exceptions
