@@ -84,7 +84,7 @@ Locust uses `ruff <https://github.com/astral-sh/ruff/>`_ for formatting and lint
 
 .. code-block:: console
 
-    $ ruff --fix <file_or_folder_to_be_formatted>
+    $ ruff check --fix <file_or_folder_to_be_formatted>
     $ ruff format <file_or_folder_to_be_formatted>
 
 You can validate the whole project using hatch:

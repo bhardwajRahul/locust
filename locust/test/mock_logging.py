@@ -2,9 +2,8 @@ from __future__ import annotations
 
 import logging
 from types import TracebackType
-from typing import Union
 
-LogMessage = list[Union[str, dict[str, TracebackType]]]
+LogMessage = list[str | dict[str, TracebackType]]
 
 
 class MockedLoggingHandler(logging.Handler):
