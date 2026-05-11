@@ -6,9 +6,8 @@ For full details of changes, please see https://github.com/locustio/locust/relea
 
 2.44.0
 ======
-* Fix FastHttpUser crash on Python 3.13+ due to GC collecting __dict__ reference https://github.com/locustio/locust/pull/3398
 * Add first seen / last seen timestamps to failure stats https://github.com/locustio/locust/pull/3403
-* varioust fixes for FastHttpUser (https://github.com/locustio/locust/pull/3405, https://github.com/locustio/locust/pull/3406, https://github.com/locustio/locust/pull/3397)
+* Various fixes for FastHttpUser (https://github.com/locustio/locust/pull/3398, https://github.com/locustio/locust/pull/3405, https://github.com/locustio/locust/pull/3406, https://github.com/locustio/locust/pull/3397)
 * Add AI-optimized documentation (llms.txt) https://github.com/locustio/locust/pull/3399
 * Add CsvRequestLogger for per-request CSV logging https://github.com/locustio/locust/pull/3404
 
