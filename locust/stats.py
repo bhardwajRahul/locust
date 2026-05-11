@@ -774,7 +774,7 @@ class StatsError:
         def _getattr(obj: StatsError, key: str, default: Any) -> Any:
             value = getattr(obj, key, default)
 
-            if key in ["error"]:
+            if key == "error":
                 value = StatsError.parse_error(value)
 
             return value

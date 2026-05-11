@@ -4,9 +4,7 @@ import os
 import subprocess
 import sys
 
-github_api_token = (
-    os.getenv("CHANGELOG_GITHUB_TOKEN") if os.getenv("CHANGELOG_GITHUB_TOKEN") else input("Enter Github API token: ")
-)
+github_api_token = os.getenv("CHANGELOG_GITHUB_TOKEN") or input("Enter Github API token: ")
 
 if len(sys.argv) < 2:
     raise Exception("Provide a version number as parameter (--future-release argument)")
