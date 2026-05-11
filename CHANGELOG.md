@@ -1,6 +1,32 @@
 # Detailed changelog
 The most important changes can also be found in [the documentation](https://docs.locust.io/en/latest/changelog.html).
 
+## [2.44.0](https://github.com/locustio/locust/tree/2.44.0) (2026-05-11)
+
+[Full Changelog](https://github.com/locustio/locust/compare/2.43.4...2.44.0)
+
+**Fixed bugs:**
+
+- FastHttpUser crashes with TypeError: on\_request\(\) missing 4 required positional arguments on Python 3.13+ [\#3388](https://github.com/locustio/locust/issues/3388)
+
+**Closed issues:**
+
+- Show when each failure was first and last seen in the Failures tab [\#3402](https://github.com/locustio/locust/issues/3402)
+- Add CSV Export of Detailed Request Logs [\#3389](https://github.com/locustio/locust/issues/3389)
+- \[Docs\] Publish AI-optimized documentation [\#3372](https://github.com/locustio/locust/issues/3372)
+
+**Merged pull requests:**
+
+- unify ruff in pyproject.toml and pre-commits [\#3409](https://github.com/locustio/locust/pull/3409) ([even-even](https://github.com/even-even))
+- Disable UI lib npm package publication [\#3408](https://github.com/locustio/locust/pull/3408) ([cyberw](https://github.com/cyberw))
+- fix\(fasthttp\): add 308 to redirect\_resonse\_codes in LocustUserAgent [\#3406](https://github.com/locustio/locust/pull/3406) ([jorgetamayo21](https://github.com/jorgetamayo21))
+- fix\(fasthttp\): handle zlib.error for truncated gzip streams under high load [\#3405](https://github.com/locustio/locust/pull/3405) ([jorgetamayo21](https://github.com/jorgetamayo21))
+- feat\(contrib\): add CsvRequestLogger for per-request CSV logging [\#3404](https://github.com/locustio/locust/pull/3404) ([AKIB473](https://github.com/AKIB473))
+- Add first seen / last seen timestamps to failure stats [\#3403](https://github.com/locustio/locust/pull/3403) ([tugkanboz](https://github.com/tugkanboz))
+- Add AI-optimized documentation \(llms.txt\) [\#3399](https://github.com/locustio/locust/pull/3399) ([nk-tedo-001](https://github.com/nk-tedo-001))
+- Fix FastHttpUser crash on Python 3.13+ due to GC collecting \_\_dict\_\_ reference cycle [\#3398](https://github.com/locustio/locust/pull/3398) ([armorbreak001](https://github.com/armorbreak001))
+- fix\(fasthttp\): catch FAILURE\_EXCEPTIONS during response body read [\#3397](https://github.com/locustio/locust/pull/3397) ([jorgetamayo21](https://github.com/jorgetamayo21))
+
 ## [2.43.4](https://github.com/locustio/locust/tree/2.43.4) (2026-04-01)
 
 [Full Changelog](https://github.com/locustio/locust/compare/2.43.3...2.43.4)
