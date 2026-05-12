@@ -114,6 +114,8 @@ https://github.com/locustio/locust/issues/2328
 Other questions and issues
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Ask on `Locust's Discord <https://discord.gg/faeXQY82Zs>`__.
+
 `Check the list of issues (a lot of questions/misunderstandings are
 filed as
 issues) <https://github.com/locustio/locust/issues?q=is%3Aissue%20>`__
@@ -124,5 +126,4 @@ account can contribute!
 If you have questions about Locust that are not answered here, please
 check
 `StackOverflow <https://stackoverflow.com/questions/tagged/locust>`__,
-or post your question there. This wiki is not for asking questions but
-for answering them :)
+or post your question there.
