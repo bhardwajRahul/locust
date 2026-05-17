@@ -126,7 +126,7 @@ master_doc = "index"
 
 # General substitutions.
 project = "Locust"
-copyright = "2009-2025, Carl Byström, Jonatan Heyman, Lars Holmberg"
+copyright = "2009-2026, Carl Byström, Jonatan Heyman, Lars Holmberg"
 
 # Intersphinx config
 intersphinx_mapping = {
