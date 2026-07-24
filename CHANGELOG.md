@@ -1,5 +1,24 @@
 # Also see https://github.com/locustio/locust/releases
 
+## [2.46.2](https://github.com/locustio/locust/tree/2.46.2) (2026-07-24)
+
+[Full Changelog](https://github.com/locustio/locust/compare/2.46.1...2.46.2)
+
+**Closed issues:**
+
+- get\_response\_time\_percentile counts None \(async\) requests in the denominator, deflating all reported percentiles [\#3472](https://github.com/locustio/locust/issues/3472)
+
+**Merged pull requests:**
+
+- build\(deps-dev\): bump cryptography from 46.0.7 to 48.0.1 [\#3481](https://github.com/locustio/locust/pull/3481) ([dependabot[bot]](https://github.com/apps/dependabot))
+- build\(deps\): bump picomatch from 2.3.1 to 2.3.2 in /locust/webui [\#3480](https://github.com/locustio/locust/pull/3480) ([dependabot[bot]](https://github.com/apps/dependabot))
+- build\(deps\): bump minimatch from 3.1.2 to 3.1.5 in /locust/webui [\#3479](https://github.com/locustio/locust/pull/3479) ([dependabot[bot]](https://github.com/apps/dependabot))
+- build\(deps\): bump brace-expansion from 1.1.12 to 1.1.16 in /locust/webui [\#3478](https://github.com/locustio/locust/pull/3478) ([dependabot[bot]](https://github.com/apps/dependabot))
+- build\(deps\): bump tar from 7.5.7 to 7.5.22 in /locust/webui [\#3477](https://github.com/locustio/locust/pull/3477) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Change StatsEntry typing to not allow None for stats [\#3476](https://github.com/locustio/locust/pull/3476) ([reachsridhard](https://github.com/reachsridhard))
+- Fix response time percentiles being deflated by requests logged with response\_time=None [\#3473](https://github.com/locustio/locust/pull/3473) ([haskiindahouse](https://github.com/haskiindahouse))
+- build\(deps\): bump shell-quote from 1.8.1 to 1.10.0 in /locust/webui [\#3471](https://github.com/locustio/locust/pull/3471) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [2.46.1](https://github.com/locustio/locust/tree/2.46.1) (2026-07-20)
 
 [Full Changelog](https://github.com/locustio/locust/compare/2.46.0...2.46.1)
