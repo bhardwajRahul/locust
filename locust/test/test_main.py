@@ -1762,3 +1762,41 @@ class TelemetryTests(ProcessIntegrationTest):
             ) as tp:
                 tp.expect('"name": "locust.users.count"', stream="stdout")
                 tp.expect('"value": 3', stream="stdout")
+
+    def test_user_count_gauge_reports_running_users_distributed(self):
+        locustfile = textwrap.dedent(
+            """
+            from locust import User, constant, task
+
+            class SimpleUser(User):
+                wait_time = constant(1)
+
+                @task
+                def noop(self):
+                    pass
+            """
+        )
+        otel_env = {
+            "OTEL_METRICS_EXPORTER": "console",
+            "OTEL_METRIC_EXPORT_INTERVAL": "250",
+        }
+        with mock_locustfile(content=locustfile, dir=tempfile.gettempdir()) as mocked:
+            with TestProcess(
+                "locust -f - --worker --otel",
+                sigint_on_exit=False,
+                extra_env=otel_env,
+                join_timeout=3,
+            ) as tp_worker:
+                with TestProcess(
+                    f"locust -f {mocked.file_path} --headless --master --expect-workers 1 -u 4 -r 4 -t 1 --otel",
+                    sigint_on_exit=False,
+                    extra_env=otel_env,
+                    join_timeout=3,
+                ) as tp_master:
+                    # Only the master has visibility into the swarm-wide user count.
+                    tp_master.expect('"name": "locust.users.count"', stream="stdout")
+                    tp_master.expect('"value": 4', stream="stdout")
+                    tp_master.expect("Shutting down (exit code 0)")
+
+                    # Workers only know their own share, so they shouldn't report this metric at all.
+                    tp_worker.not_expect_any('"name": "locust.users.count"', stream="stdout")
